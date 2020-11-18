@@ -14,18 +14,32 @@
   <body>
     <h1>Dice Roller</h1>
     <main>
-      <input type="checkbox" id="best-worst" />
-      <label for="best-worst"> Use Best Of/Worst Of </label>
-      <div>
-        <button class="dice d4" data-roll="d4">D4</button>
-        <button class="dice d6" data-roll="d6">D6</button>
-        <button class="dice d8" data-roll="d8">D8</button>
-        <button class="dice d10" data-roll="d10">D10</button>
-        <button class="dice d12" data-roll="d12">D12</button>
-        <button class="dice d20" data-roll="d20">D20</button>
-        <button class="dice d10" data-roll="dpercent">D%</button>
-      </div>
-      <p id="result" aria-live="polite"></p>
+      <!-- <input type="checkbox" id="best-worst" />
+      <label for="best-worst"> Use Best Of/Worst Of </label> -->
+      <section class="dice-box">
+        <button class="dice d4" data-roll="d4">4</button>
+        <button class="dice d6" data-roll="d6">6</button>
+        <button class="dice d8" data-roll="d8">8</button>
+        <button class="dice d10" data-roll="d10">10</button>
+        <button class="dice d12" data-roll="d12">12</button>
+        <button class="dice d20" data-roll="d20">20</button>
+        <button class="dice d10" data-roll="dpercent">%</button>
+      </section>
+      <section>
+        <p class="result" id="result" aria-live="polite">
+          <span class="empty">Click a dice to roll</span>
+        </p>
+      </section>
+      <section id="diceLog" class="dice-log">
+        <div class="dice-log-header">
+          <h2>Dice Log</h2>
+          <button id="clear">Clear</button>
+        </div>
+        <p id="diceLogContent" class="dice-log-content"></p>
+        <div>
+          <p>Total: <span id="total"></span></p>
+        </div>
+      </section>
     </main>
 
     <script src="index.js"></script>

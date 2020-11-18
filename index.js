@@ -16,8 +16,14 @@ var result = document.querySelector("#result");
 
 var bestWorst = document.querySelector("#best-worst");
 
+var diceLog = document.querySelector("#diceLog");
+
+var diceLogContent = document.querySelector("#diceLogContent");
+
+var total = document.querySelector("#total");
+
 // Placeholder for die rolls
-var rolls;
+var rolls = [];
 
 //// Methods
 /**
@@ -67,23 +73,26 @@ function roll(d) {
 
 //// Event Handlers
 var clickHandler = function (event) {
-  // Only run on [data-roll] elements
+  if (event.target.matches("#clear")) {
+    rolls = [];
+    diceLogContent.textContent = "";
+    total.textContent = "";
+  }
+
   var d = event.target.getAttribute("data-roll");
   if (!d) return;
-
-  // Clear the rolls array
-  rolls = [];
 
   // Roll the dice
   roll(d);
 
-  // If best of/worst of, roll again
-  if (bestWorst.checked) {
-    roll(d);
-  }
-
   // Render the result in the UI
-  result.textContent = rolls.join(" - ");
+  result.textContent = rolls[rolls.length - 1];
+
+  diceLogContent.textContent = rolls.join(" + ");
+
+  total.textContent = rolls.reduce(function (cur, arr) {
+    return arr + cur;
+  });
 };
 
 //// Inits

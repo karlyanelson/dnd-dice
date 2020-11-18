@@ -1,5 +1,5 @@
 body {
-  background-color: #101017;
+  background-color: #0f0902;
   color: #d8d6e8;
   text-align: center;
   font-size: 1.5rem;
@@ -15,12 +15,25 @@ button {
   font-size: 2rem;
 }
 
+section {
+  margin: 1rem auto;
+}
+
+/* Dice */
+.dice-box {
+  border: 0.5rem solid #2d1d08;
+  padding: 1rem;
+  display: inline-block;
+  background: #170f04;
+}
+
 .dice {
-  background-color: white;
+  background-color: #dfcdb5;
   color: #101017;
   font-size: 2rem;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 2rem;
   border: none;
+  /* background: radial-gradient(circle, #dfcdb5 0%, #dfcdb5 40%, #170f04 100%); */
 }
 
 .dice + .dice {
@@ -32,8 +45,9 @@ button {
 }
 
 .d6 {
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   border-radius: 0.25rem;
+  /* background: radial-gradient(circle, #dfcdb5 0%, #dfcdb5 75%, #170f04 100%); */
 }
 
 .d8 {
@@ -61,4 +75,51 @@ button {
 
 .d20 {
   clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+}
+
+.dice:hover {
+  background: #d8d6e8;
+}
+
+/* Results */
+.result {
+  font-size: 10rem;
+  padding: 1rem 3rem;
+  margin: 0;
+  border: 0.125rem solid #d8d6e8;
+  line-height: 1.8;
+  max-width: 25%;
+  margin: 0 auto;
+}
+
+.empty {
+  font-size: 2rem;
+  vertical-align: middle;
+}
+
+/* Dice Log */
+.dice-log {
+  max-width: 25%;
+  margin: 0 auto;
+}
+
+.dice-log button {
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  flex: 0 0 auto;
+  background: none;
+  border: 1px soild #d8d6e8;
+  color: #d8d6e8;
+}
+
+.dice-log-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dice-log-content {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
