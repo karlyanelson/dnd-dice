@@ -18,31 +18,25 @@
   transition: transform $animation-duration;
 }
 
-.d4-animation__face {
-  position: absolute;
+.d4__face {
   width: 10rem;
   height: 10rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: $bg-dice;
-  color: $text-dice;
-  font-size: 3rem;
   clip-path: polygon(50% 0%, 0 80%, 100% 80%);
 }
-.d4-animation__face--1 {
+
+.d4__face--1 {
   transform: rotateY(0deg) rotateX(8deg) translateZ(2rem);
 }
-.d4-animation__face--2 {
+.d4__face--2 {
   transform: rotateY(113deg) rotateX(26deg) rotateZ(-13deg) translateZ(2rem);
 }
-.d4-animation__face--3 {
+.d4__face--3 {
   transform: rotateY(-113deg) rotateX(26deg) rotateZ(13deg) translateZ(2rem);
 }
-.d4-animation__face--4 {
+.d4__face--4 {
   transform: rotateY(-5deg) rotateX(81deg) rotateZ(115deg) translateZ(-2rem);
 }
-.d4-animation__face--4 .d4-animation__text {
+.d4__face--4 .d4-animation__text {
   transform: scale(-1, 1) rotateZ(123deg);
 }
 

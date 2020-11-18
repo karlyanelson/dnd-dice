@@ -63,7 +63,7 @@ function roll(d) {
   shuffle(dice[d]);
   rolls.push(dice[d][0]);
 
-  if (d === "d6" || d === "d4") {
+  if (d === "d4" || d === "d6" || d === "d8") {
     animateDice(d);
   } else {
     animatedDiceContainer.classList = "";
