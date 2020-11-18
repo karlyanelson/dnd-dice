@@ -14,3 +14,51 @@ button {
 button {
   font-size: 2rem;
 }
+
+.dice {
+  background-color: white;
+  color: #101017;
+  font-size: 2rem;
+  padding: 1.5rem 1rem;
+  border: none;
+}
+
+.dice + .dice {
+  margin-left: 0.5rem;
+}
+
+.d4 {
+  clip-path: polygon(50% 0%, 0 75%, 100% 75%);
+}
+
+.d6 {
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+.d8 {
+  clip-path: polygon(50% 0%, 90% 50%, 50% 100%, 10% 50%);
+}
+
+.d10 {
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.d12 {
+  clip-path: polygon(
+    50% 0%,
+    80% 10%,
+    100% 35%,
+    100% 70%,
+    80% 90%,
+    50% 100%,
+    20% 90%,
+    0% 70%,
+    0% 35%,
+    20% 10%
+  );
+}
+
+.d20 {
+  clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+}

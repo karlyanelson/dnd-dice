@@ -9,6 +9,7 @@ var dice = {
   d10: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
   d12: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
   d20: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+  dpercent: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
 };
 
 var result = document.querySelector("#result");
@@ -25,7 +26,7 @@ var rolls;
  * @param  {Array} array The array to shuffle
  * @return {String}      The first item in the shuffled array
  */
-var shuffle = function (array) {
+function shuffle(array) {
   var currentIndex = array.length;
   var temporaryValue, randomIndex;
 
@@ -42,27 +43,27 @@ var shuffle = function (array) {
   }
 
   return array;
-};
+}
 
 /**
  * Shuffle the dice on page load
  */
-var startingShuffle = function () {
+function startingShuffle() {
   for (var key in dice) {
     if (dice.hasOwnProperty(key)) {
       shuffle(dice[key]);
     }
   }
-};
+}
 
 /**
  * Roll the dice
  * @param  {String} d The die size to use
  */
-var roll = function (d) {
+function roll(d) {
   shuffle(dice[d]);
   rolls.push(dice[d][0]);
-};
+}
 
 //// Event Handlers
 var clickHandler = function (event) {
