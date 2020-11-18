@@ -2,9 +2,9 @@
 
 /* d6-animation */
 .d6-animation-container {
-  width: 10rem;
-  height: 10rem;
-  perspective: 30rem;
+  width: 8rem;
+  height: 8rem;
+  perspective: 24rem;
   margin: 1rem auto;
   opacity: 0;
 }
@@ -20,8 +20,8 @@
 
 .d6-animation__face {
   position: absolute;
-  width: 10rem;
-  height: 10rem;
+  width: 8rem;
+  height: 8rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,39 +32,39 @@
   border-radius: 0.25rem;
 }
 .d6-animation__face--1 {
-  transform: rotateY(360deg) translateZ(5rem); // 0deg
+  transform: rotateY(360deg) translateZ(4rem); // 0deg
 }
 .d6-animation__face--2 {
-  transform: rotateY(450deg) translateZ(5rem); // 90deg
+  transform: rotateY(450deg) translateZ(4rem); // 90deg
 }
 .d6-animation__face--3 {
-  transform: rotateY(540deg) translateZ(5rem); // 180deg
+  transform: rotateY(540deg) translateZ(4rem); // 180deg
 }
 .d6-animation__face--4 {
-  transform: rotateY(-450deg) translateZ(5rem); // -90deg
+  transform: rotateY(-450deg) translateZ(4rem); // -90deg
 }
 .d6-animation__face--5 {
-  transform: rotateX(450deg) translateZ(5rem); // 90deg
+  transform: rotateX(450deg) translateZ(4rem); // 90deg
 }
 .d6-animation__face--6 {
-  transform: rotateX(-450deg) translateZ(5rem); // -90deg
+  transform: rotateX(-450deg) translateZ(4rem); // -90deg
 }
 
 .d6-animation.show-1 {
-  transform: translateZ(-5rem) rotateY(360deg); // 0deg
+  transform: translateZ(-4rem) rotateY(360deg); // 0deg
 }
 .d6-animation.show-2 {
-  transform: translateZ(-5rem) rotateY(-450deg); // -90deg
+  transform: translateZ(-4rem) rotateY(-450deg); // -90deg
 }
 .d6-animation.show-3 {
-  transform: translateZ(-5rem) rotateY(-540deg); // -180deg
+  transform: translateZ(-4rem) rotateY(-540deg); // -180deg
 }
 .d6-animation.show-4 {
-  transform: translateZ(-5rem) rotateY(450deg); // 90deg
+  transform: translateZ(-4rem) rotateY(450deg); // 90deg
 }
 .d6-animation.show-5 {
-  transform: translateZ(-5rem) rotateX(-450deg); // -90deg
+  transform: translateZ(-4rem) rotateX(-450deg); // -90deg
 }
 .d6-animation.show-6 {
-  transform: translateZ(-5rem) rotateX(450deg); // 90deg
+  transform: translateZ(-4rem) rotateX(450deg); // 90deg
 }
