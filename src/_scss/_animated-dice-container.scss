@@ -1,0 +1,22 @@
+#animatedDiceContainer {
+  position: relative;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+}
+
+.animated-dice {
+  position: absolute;
+}
+
+#animatedDiceContainer.show-d4 {
+  .d4-animation-container {
+    opacity: 1;
+  }
+}
+
+#animatedDiceContainer.show-d6 {
+  .d6-animation-container {
+    opacity: 1;
+  }
+}

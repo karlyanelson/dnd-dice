@@ -33,31 +33,33 @@
         <button class="dice d100" data-roll="d100">100</button>
       </section>
       <section class="results__container">
-        <div
-          id="d6animationContainer"
-          class="d6-animation-container"
-          aria-hidden="true"
-        >
-          <div id="d6animation" class="d6-animation">
-            <div class="d6-animation__face d6-animation__face--1">1</div>
-            <div class="d6-animation__face d6-animation__face--2">2</div>
-            <div class="d6-animation__face d6-animation__face--3">3</div>
-            <div class="d6-animation__face d6-animation__face--4">4</div>
-            <div class="d6-animation__face d6-animation__face--5">5</div>
-            <div class="d6-animation__face d6-animation__face--6">6</div>
+        <div id="animatedDiceContainer">
+          <div
+            id="d4animationContainer"
+            class="animated-dice d4-animation-container"
+            aria-hidden="true"
+          >
+            <div id="d4animation" class="d4-animation">
+              <div class="d4-animation__face d4-animation__face--1">1</div>
+              <div class="d4-animation__face d4-animation__face--2">2</div>
+              <div class="d4-animation__face d4-animation__face--3">3</div>
+              <div class="d4-animation__face d4-animation__face--4">
+                <span class="d4-animation__text">4</span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div
-          id="d4animationContainer"
-          class="d4-animation-container"
-          aria-hidden="true"
-        >
-          <div id="d4animation" class="d4-animation">
-            <div class="d4-animation__face d4-animation__face--1">1</div>
-            <div class="d4-animation__face d4-animation__face--2">2</div>
-            <div class="d4-animation__face d4-animation__face--3">3</div>
-            <div class="d4-animation__face d4-animation__face--4">
-              <span class="d4-animation__text">4</span>
+          <div
+            id="d6animationContainer"
+            class="animated-dice d6-animation-container"
+            aria-hidden="true"
+          >
+            <div id="d6animation" class="d6-animation">
+              <div class="d6-animation__face d6-animation__face--1">1</div>
+              <div class="d6-animation__face d6-animation__face--2">2</div>
+              <div class="d6-animation__face d6-animation__face--3">3</div>
+              <div class="d6-animation__face d6-animation__face--4">4</div>
+              <div class="d6-animation__face d6-animation__face--5">5</div>
+              <div class="d6-animation__face d6-animation__face--6">6</div>
             </div>
           </div>
         </div>
