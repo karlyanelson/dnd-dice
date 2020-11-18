@@ -45,19 +45,37 @@
 
 .d6-animation.show-1 {
   transform: translateZ(-4rem) rotateY(360deg); // 0deg
+  .d6__face--1 {
+    background: $bg-dice-highlighted;
+  }
 }
 .d6-animation.show-2 {
   transform: translateZ(-4rem) rotateY(-450deg); // -90deg
+  .d6__face--2 {
+    background: $bg-dice-highlighted;
+  }
 }
 .d6-animation.show-3 {
   transform: translateZ(-4rem) rotateY(-540deg); // -180deg
+  .d6__face--3 {
+    background: $bg-dice-highlighted;
+  }
 }
 .d6-animation.show-4 {
   transform: translateZ(-4rem) rotateY(450deg); // 90deg
+  .d6__face--4 {
+    background: $bg-dice-highlighted;
+  }
 }
 .d6-animation.show-5 {
   transform: translateZ(-4rem) rotateX(-450deg); // -90deg
+  .d6__face--5 {
+    background: $bg-dice-highlighted;
+  }
 }
 .d6-animation.show-6 {
   transform: translateZ(-4rem) rotateX(450deg); // 90deg
+  .d6__face--6 {
+    background: $bg-dice-highlighted;
+  }
 }

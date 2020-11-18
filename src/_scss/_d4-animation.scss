@@ -41,14 +41,26 @@
 }
 
 .d4-animation.show-1 {
-  transform: translateZ(-5rem) rotateY(0deg); // 0deg
+  transform: translateZ(-5rem) rotateY(0deg);
+  .d4__face--1 {
+    background: $bg-dice-highlighted;
+  }
 }
 .d4-animation.show-2 {
   transform: translateZ(-5rem) rotateY(-110deg) rotateX(12deg);
+  .d4__face--2 {
+    background: $bg-dice-highlighted;
+  }
 }
 .d4-animation.show-3 {
   transform: translateZ(-5rem) rotateY(125deg) rotateX(12deg);
+  .d4__face--3 {
+    background: $bg-dice-highlighted;
+  }
 }
 .d4-animation.show-4 {
   transform: translateZ(-5rem) rotateY(0deg) rotateZ(183deg) rotateX(97deg);
+  .d4__face--4 {
+    background: $bg-dice-highlighted;
+  }
 }
