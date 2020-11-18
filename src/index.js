@@ -2,7 +2,7 @@
 
 //// Variables
 // Dice arrays
-var dice = {
+const dice = {
   d4: [1, 2, 3, 4],
   d6: [1, 2, 3, 4, 5, 6],
   d8: [1, 2, 3, 4, 5, 6, 7, 8],
@@ -12,33 +12,25 @@ var dice = {
   d100: [10, 20, 30, 40, 50, 60, 70, 80, 90, 100],
 };
 
-var result = document.querySelector("#result");
+const result = document.querySelector("#result");
 
-var bestWorst = document.querySelector("#best-worst");
+const bestWorst = document.querySelector("#best-worst");
 
-var diceLog = document.querySelector("#diceLog");
+const diceLog = document.querySelector("#diceLog");
 
-var diceLogContent = document.querySelector("#diceLogContent");
+const diceLogContent = document.querySelector("#diceLogContent");
 
-var total = document.querySelector("#total");
+const total = document.querySelector("#total");
 
-var d6animation = document.querySelector("#d6animation");
+const d6animation = document.querySelector("#d6animation");
 
-var d6animationContainer = document.querySelector("#d6animationContainer");
+const d6animationContainer = document.querySelector("#d6animationContainer");
 
-// Placeholder for die rolls
-var rolls = [];
+let rolls = [];
 
-//// Methods
-/**
- * Randomly shuffle an array
- * https://stackoverflow.com/a/2450976/1293256
- * @param  {Array} array The array to shuffle
- * @return {String}      The first item in the shuffled array
- */
 function shuffle(array) {
-  var currentIndex = array.length;
-  var temporaryValue, randomIndex;
+  let currentIndex = array.length;
+  let temporaryValue, randomIndex;
 
   // While there remain elements to shuffle...
   while (0 !== currentIndex) {
@@ -55,25 +47,17 @@ function shuffle(array) {
   return array;
 }
 
-/**
- * Shuffle the dice on page load
- */
 function startingShuffle() {
-  for (var key in dice) {
+  for (let key in dice) {
     if (dice.hasOwnProperty(key)) {
       shuffle(dice[key]);
     }
   }
 }
 
-/**
- * Roll the dice
- * @param  {String} d The die size to use
- */
 function roll(d) {
   shuffle(dice[d]);
   rolls.push(dice[d][0]);
-  // result.classList.toggle("rolled");
 
   if (d === "d6") {
     d6animationContainer.classList.add("show");
@@ -84,6 +68,7 @@ function roll(d) {
     d6animation.classList.remove("show-4");
     d6animation.classList.remove("show-5");
     d6animation.classList.remove("show-6");
+
     d6animation.classList.add("show-" + dice[d][0]);
   } else {
     d6animationContainer.classList.remove("show");
@@ -91,13 +76,13 @@ function roll(d) {
 }
 
 //// Event Handlers
-var clickHandler = function (event) {
+function clickHandler(event) {
   if (event.target.matches("#clear")) {
     rolls = [];
     diceLogContent.textContent = "0";
     total.textContent = "0";
   } else {
-    var d = event.target.getAttribute("data-roll");
+    const d = event.target.getAttribute("data-roll");
     if (!d) return;
 
     // Roll the dice
@@ -112,7 +97,7 @@ var clickHandler = function (event) {
       return arr + cur;
     });
   }
-};
+}
 
 //// Inits
 // Shuffle the dice numbers on load
