@@ -22,9 +22,9 @@ var diceLogContent = document.querySelector("#diceLogContent");
 
 var total = document.querySelector("#total");
 
-var d6cube = document.querySelector("#d6cube");
+var d6animation = document.querySelector("#d6animation");
 
-var d6cubeContainer = document.querySelector("#d6cubeContainer");
+var d6animationContainer = document.querySelector("#d6animationContainer");
 
 // Placeholder for die rolls
 var rolls = [];
@@ -76,17 +76,17 @@ function roll(d) {
   // result.classList.toggle("rolled");
 
   if (d === "d6") {
-    d6cubeContainer.classList.add("show");
+    d6animationContainer.classList.add("show");
 
-    d6cube.classList.remove("show-1");
-    d6cube.classList.remove("show-2");
-    d6cube.classList.remove("show-3");
-    d6cube.classList.remove("show-4");
-    d6cube.classList.remove("show-5");
-    d6cube.classList.remove("show-6");
-    d6cube.classList.add("show-" + dice[d][0]);
+    d6animation.classList.remove("show-1");
+    d6animation.classList.remove("show-2");
+    d6animation.classList.remove("show-3");
+    d6animation.classList.remove("show-4");
+    d6animation.classList.remove("show-5");
+    d6animation.classList.remove("show-6");
+    d6animation.classList.add("show-" + dice[d][0]);
   } else {
-    d6cubeContainer.classList.remove("show");
+    d6animationContainer.classList.remove("show");
   }
 }
 

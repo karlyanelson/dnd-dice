@@ -8,7 +8,7 @@
       name="description"
       content="A simple Dungeons and Dragons dice roller."
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.scss" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap"
@@ -33,19 +33,51 @@
         <button class="dice d100" data-roll="d100">100</button>
       </section>
       <section class="results__container">
-        <div id="d6cubeContainer" class="d6cube-container" aria-hidden="true">
-          <div id="d6cube" class="d6cube">
-            <div class="d6cube__face d6cube__face--1" aria-hidden="true">1</div>
-            <div class="d6cube__face d6cube__face--2" aria-hidden="true">2</div>
-            <div class="d6cube__face d6cube__face--3" aria-hidden="true">3</div>
-            <div class="d6cube__face d6cube__face--4" aria-hidden="true">4</div>
-            <div class="d6cube__face d6cube__face--5" aria-hidden="true">5</div>
-            <div class="d6cube__face d6cube__face--6" aria-hidden="true">6</div>
+        <div
+          id="d6animationContainer"
+          class="d6-animation-container"
+          aria-hidden="true"
+        >
+          <div id="d6animation" class="d6-animation">
+            <div
+              class="d6-animation__face d6-animation__face--1"
+              aria-hidden="true"
+            >
+              1
+            </div>
+            <div
+              class="d6-animation__face d6-animation__face--2"
+              aria-hidden="true"
+            >
+              2
+            </div>
+            <div
+              class="d6-animation__face d6-animation__face--3"
+              aria-hidden="true"
+            >
+              3
+            </div>
+            <div
+              class="d6-animation__face d6-animation__face--4"
+              aria-hidden="true"
+            >
+              4
+            </div>
+            <div
+              class="d6-animation__face d6-animation__face--5"
+              aria-hidden="true"
+            >
+              5
+            </div>
+            <div
+              class="d6-animation__face d6-animation__face--6"
+              aria-hidden="true"
+            >
+              6
+            </div>
           </div>
         </div>
-        <p class="result" id="result" aria-live="polite">
-          <span class="empty">Click dice to roll</span>
-        </p>
+        <p class="result screenreader-only" id="result" aria-live="polite"></p>
       </section>
       <section id="diceLog" class="dice-log">
         <div class="dice-log-header">
@@ -59,6 +91,6 @@
       </section>
     </main>
 
-    <script src="index.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>

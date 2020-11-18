@@ -1,0 +1,36 @@
+/* Media Queries */
+
+@media (prefers-reduced-motion) {
+  .result.rolled {
+    transform: rotateX(0deg);
+  }
+}
+
+@media (max-width: 48em) {
+  .dice-log {
+    max-width: 100%;
+  }
+
+  .dice {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .d6 {
+    padding: 0.5rem 1rem;
+  }
+
+  .dice-box {
+    padding: 0.5rem;
+  }
+
+  section + section {
+    margin-top: 2rem;
+  }
+
+  .result {
+    font-size: 8rem;
+    min-height: 10rem;
+    min-width: 10rem;
+  }
+}

@@ -1,0 +1,42 @@
+/* Dice Log */
+.dice-log {
+  max-width: 25%;
+  color: $text-base;
+}
+
+.dice-log button {
+  font-size: 1rem;
+  padding: 0.25rem 0.5rem;
+  flex: 0 0 auto;
+  background: none;
+  border: 1px soild $text-base;
+  color: $text-base;
+  border-radius: 0.25rem;
+}
+
+.dice-log button:focus {
+  border-color: $text-light;
+  color: $text-light;
+}
+
+.dice-log-header h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.dice-log-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dice-log-content {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.total {
+  font-size: 1.5em;
+  color: #d8d6e8;
+}

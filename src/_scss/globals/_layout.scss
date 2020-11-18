@@ -1,0 +1,21 @@
+body {
+  background-color: $bg-dark;
+  color: $text-light;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+body,
+button {
+  font-family: "Fondamento", "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
+}
+
+section {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section + section {
+  margin-top: 4rem;
+}
