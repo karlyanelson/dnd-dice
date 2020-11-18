@@ -69,6 +69,7 @@ function startingShuffle() {
 function roll(d) {
   shuffle(dice[d]);
   rolls.push(dice[d][0]);
+  result.classList.toggle("rolled");
 }
 
 //// Event Handlers

@@ -89,12 +89,20 @@ section + section {
 /* Results */
 .result {
   font-size: 10rem;
-  padding: 0.25rem 1rem 1rem 1rem;
+  padding: 0.25rem 1rem 0.5rem 1rem;
   margin: 0;
   border: 0.125rem solid #dfcdb5;
+  border-radius: 0.5rem;
+  min-height: 250px;
+  min-width: 250px;
   line-height: 1.4;
-  max-width: 25%;
-  margin: 0 auto;
+  transform: rotateX(0deg);
+  transition: all ease 500ms;
+  display: inline-block;
+}
+
+.result.rolled {
+  transform: rotateX(360deg);
 }
 
 .empty {
