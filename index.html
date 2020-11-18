@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DnD Dice Roller</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fondamento&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Dice Roller</h1>
+    <main>
+      <input type="checkbox" id="best-worst" />
+      <label for="best-worst"> Use Best Of/Worst Of </label>
+      <div>
+        <button data-roll="d4">D4</button>
+        <button data-roll="d6">D6</button>
+        <button data-roll="d8">D8</button>
+        <button data-roll="d10">D10</button>
+        <button data-roll="d12">D12</button>
+        <button data-roll="d20">D20</button>
+      </div>
+      <p id="result" aria-live="polite"></p>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>

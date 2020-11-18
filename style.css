@@ -1,0 +1,16 @@
+body {
+  background-color: #101017;
+  color: #d8d6e8;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+body,
+button {
+  font-family: "Fondamento", "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
+}
+
+button {
+  font-size: 2rem;
+}
