@@ -37,6 +37,10 @@ section + section {
   /* background: radial-gradient(circle, #dfcdb5 0%, #dfcdb5 40%, #170f04 100%); */
 }
 
+.dice:focus {
+  background: white;
+}
+
 .dice + .dice {
   margin-left: 0.5rem;
 }
