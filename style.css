@@ -11,12 +11,13 @@ button {
     "Trebuchet MS", sans-serif;
 }
 
-button {
-  font-size: 2rem;
+section {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-section {
-  margin: 1rem auto;
+section + section {
+  margin-top: 4rem;
 }
 
 /* Dice */
@@ -30,7 +31,7 @@ section {
 .dice {
   background-color: #dfcdb5;
   color: #101017;
-  font-size: 2rem;
+  font-size: 1.5rem;
   padding: 1.5rem 2rem;
   border: none;
   /* background: radial-gradient(circle, #dfcdb5 0%, #dfcdb5 40%, #170f04 100%); */
@@ -41,7 +42,7 @@ section {
 }
 
 .d4 {
-  clip-path: polygon(50% 0%, 0 75%, 100% 75%);
+  clip-path: polygon(50% 0%, 0 80%, 100% 80%);
 }
 
 .d6 {
@@ -55,7 +56,7 @@ section {
 }
 
 .d10 {
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  clip-path: polygon(50% 0%, 90% 50%, 50% 100%, 10% 50%);
 }
 
 .d12 {
@@ -77,6 +78,10 @@ section {
   clip-path: polygon(50% 0, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
 }
 
+.d100 {
+  clip-path: polygon(50% 0%, 85% 50%, 50% 100%, 15% 50%);
+}
+
 .dice:hover {
   background: #d8d6e8;
 }
@@ -84,10 +89,10 @@ section {
 /* Results */
 .result {
   font-size: 10rem;
-  padding: 1rem 3rem;
+  padding: 0.25rem 1rem 1rem 1rem;
   margin: 0;
-  border: 0.125rem solid #d8d6e8;
-  line-height: 1.8;
+  border: 0.125rem solid #dfcdb5;
+  line-height: 1.4;
   max-width: 25%;
   margin: 0 auto;
 }
@@ -95,12 +100,13 @@ section {
 .empty {
   font-size: 2rem;
   vertical-align: middle;
+  color: #dfcdb5;
 }
 
 /* Dice Log */
 .dice-log {
   max-width: 25%;
-  margin: 0 auto;
+  color: #dfcdb5;
 }
 
 .dice-log button {
@@ -108,8 +114,14 @@ section {
   padding: 0.25rem 0.5rem;
   flex: 0 0 auto;
   background: none;
-  border: 1px soild #d8d6e8;
-  color: #d8d6e8;
+  border: 1px soild #dfcdb5;
+  color: #dfcdb5;
+  border-radius: 0.25rem;
+}
+
+.dice-log-header h2 {
+  font-size: 1.5rem;
+  margin: 0;
 }
 
 .dice-log-header {
@@ -122,4 +134,9 @@ section {
   background: rgba(255, 255, 255, 0.05);
   padding: 1rem;
   border-radius: 0.5rem;
+}
+
+.total {
+  font-size: 1.5em;
+  color: #d8d6e8;
 }
