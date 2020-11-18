@@ -76,24 +76,24 @@ function roll(d) {
 var clickHandler = function (event) {
   if (event.target.matches("#clear")) {
     rolls = [];
-    diceLogContent.textContent = "";
+    diceLogContent.textContent = "0";
     total.textContent = "0";
+  } else {
+    var d = event.target.getAttribute("data-roll");
+    if (!d) return;
+
+    // Roll the dice
+    roll(d);
+
+    // Render the result in the UI
+    result.textContent = rolls[rolls.length - 1];
+
+    diceLogContent.textContent = rolls.join(" + ");
+
+    total.textContent = rolls.reduce(function (cur, arr) {
+      return arr + cur;
+    });
   }
-
-  var d = event.target.getAttribute("data-roll");
-  if (!d) return;
-
-  // Roll the dice
-  roll(d);
-
-  // Render the result in the UI
-  result.textContent = rolls[rolls.length - 1];
-
-  diceLogContent.textContent = rolls.join(" + ");
-
-  total.textContent = rolls.reduce(function (cur, arr) {
-    return arr + cur;
-  });
 };
 
 //// Inits
