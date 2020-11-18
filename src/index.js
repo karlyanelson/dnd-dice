@@ -22,8 +22,10 @@ const diceLogContent = document.querySelector("#diceLogContent");
 
 const total = document.querySelector("#total");
 
+const d4animation = document.querySelector("#d4animation");
 const d6animation = document.querySelector("#d6animation");
 
+const d4animationContainer = document.querySelector("#d4animationContainer");
 const d6animationContainer = document.querySelector("#d6animationContainer");
 
 let rolls = [];
@@ -60,6 +62,8 @@ function roll(d) {
   rolls.push(dice[d][0]);
 
   if (d === "d6") {
+    d4animationContainer.classList.remove("show");
+
     d6animationContainer.classList.add("show");
 
     d6animation.classList.remove("show-1");
@@ -70,6 +74,17 @@ function roll(d) {
     d6animation.classList.remove("show-6");
 
     d6animation.classList.add("show-" + dice[d][0]);
+  } else if (d === "d4") {
+    d6animationContainer.classList.remove("show");
+
+    d4animationContainer.classList.add("show");
+
+    d4animation.classList.remove("show-1");
+    d4animation.classList.remove("show-2");
+    d4animation.classList.remove("show-3");
+    d4animation.classList.remove("show-4");
+
+    d4animation.classList.add("show-" + dice[d][0]);
   } else {
     d6animationContainer.classList.remove("show");
   }
