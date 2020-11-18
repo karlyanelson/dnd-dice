@@ -25,27 +25,52 @@
 }
 
 .d8__face--1 {
-  transform: rotateY(0deg) rotateX(8deg) translateZ(2rem);
+  transform: rotateY(0) rotateX(40deg) translateZ(4rem);
 }
 .d8__face--2 {
-  transform: rotateY(113deg) rotateX(26deg) rotateZ(-13deg) translateZ(2rem);
+  transform: rotateY(90deg) rotateX(40deg) rotateZ(0deg) translateZ(4rem);
 }
 .d8__face--3 {
-  transform: rotateY(-113deg) rotateX(26deg) rotateZ(13deg) translateZ(2rem);
+  transform: rotateY(180deg) rotateX(40deg) rotateZ(0deg) translateZ(4rem);
 }
 .d8__face--4 {
-  transform: rotateY(-5deg) rotateX(81deg) rotateZ(115deg) translateZ(-2rem);
+  transform: rotateY(-90deg) rotateX(40deg) rotateZ(0deg) translateZ(4rem);
+}
+
+.d8__face--5 {
+  transform: rotateY(0) rotateX(-40deg) rotateZ(180deg) translateZ(4rem);
+}
+.d8__face--6 {
+  transform: rotateY(90deg) rotateX(-40deg) rotateZ(180deg) translateZ(4rem);
+}
+.d8__face--7 {
+  transform: rotateY(180deg) rotateX(-40deg) rotateZ(180deg) translateZ(4rem);
+}
+.d8__face--8 {
+  transform: rotateY(-90deg) rotateX(-40deg) rotateZ(180deg) translateZ(4rem);
 }
 
 .d8-animation.show-1 {
-  transform: translateZ(-5rem) rotateY(0deg); // 0deg
+  transform: translateZ(-5rem) rotateY(0deg) rotateX(0deg) rotateZ(0deg);
 }
 .d8-animation.show-2 {
-  transform: translateZ(-5rem) rotateY(-110deg) rotateX(12deg);
+  transform: translateZ(-5rem) rotateY(-90deg) rotateX(0deg) rotateZ(0deg);
 }
 .d8-animation.show-3 {
-  transform: translateZ(-5rem) rotateY(125deg) rotateX(12deg);
+  transform: translateZ(-5rem) rotateY(180deg) rotateX(0deg) rotateZ(0deg);
 }
 .d8-animation.show-4 {
-  transform: translateZ(-5rem) rotateY(0deg) rotateZ(183deg) rotateX(97deg);
+  transform: translateZ(-5rem) rotateY(90deg) rotateX(0deg) rotateZ(0deg);
+}
+.d8-animation.show-5 {
+  transform: translateZ(-5rem) rotateY(0deg) rotateZ(180deg);
+}
+.d8-animation.show-6 {
+  transform: translateZ(-5rem) rotateY(90deg) rotateX(0deg) rotateZ(180deg);
+}
+.d8-animation.show-7 {
+  transform: translateZ(-5rem) rotateY(180deg) rotateX(0deg) rotateZ(180deg);
+}
+.d8-animation.show-8 {
+  transform: translateZ(-5rem) rotateY(-90deg) rotateX(0deg) rotateZ(180deg);
 }
