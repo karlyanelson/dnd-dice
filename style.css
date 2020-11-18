@@ -82,6 +82,11 @@ section + section {
   clip-path: polygon(50% 0%, 85% 50%, 50% 100%, 15% 50%);
 }
 
+.dice.d10,
+.dice.d100 {
+  margin-left: 0;
+}
+
 .dice:hover {
   background: #d8d6e8;
 }
@@ -93,8 +98,8 @@ section + section {
   margin: 0;
   border: 0.125rem solid #dfcdb5;
   border-radius: 0.5rem;
-  min-height: 250px;
-  min-width: 250px;
+  min-height: 15rem;
+  min-width: 15rem;
   line-height: 1.4;
   transform: rotateX(0deg);
   transition: all ease 500ms;
@@ -152,5 +157,34 @@ section + section {
 @media (prefers-reduced-motion) {
   .result.rolled {
     transform: rotateX(0deg);
+  }
+}
+
+@media (max-width: 48em) {
+  .dice-log {
+    max-width: 100%;
+  }
+
+  .dice {
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .d6 {
+    padding: 0.5rem 1rem;
+  }
+
+  .dice-box {
+    padding: 0.5rem;
+  }
+
+  section + section {
+    margin-top: 2rem;
+  }
+
+  .result {
+    font-size: 8rem;
+    min-height: 10rem;
+    min-width: 10rem;
   }
 }
