@@ -22,6 +22,10 @@ var diceLogContent = document.querySelector("#diceLogContent");
 
 var total = document.querySelector("#total");
 
+var d6cube = document.querySelector("#d6cube");
+
+var d6cubeContainer = document.querySelector("#d6cubeContainer");
+
 // Placeholder for die rolls
 var rolls = [];
 
@@ -69,7 +73,21 @@ function startingShuffle() {
 function roll(d) {
   shuffle(dice[d]);
   rolls.push(dice[d][0]);
-  result.classList.toggle("rolled");
+  // result.classList.toggle("rolled");
+
+  if (d === "d6") {
+    d6cubeContainer.classList.add("show");
+
+    d6cube.classList.remove("show-1");
+    d6cube.classList.remove("show-2");
+    d6cube.classList.remove("show-3");
+    d6cube.classList.remove("show-4");
+    d6cube.classList.remove("show-5");
+    d6cube.classList.remove("show-6");
+    d6cube.classList.add("show-" + dice[d][0]);
+  } else {
+    d6cubeContainer.classList.remove("show");
+  }
 }
 
 //// Event Handlers
